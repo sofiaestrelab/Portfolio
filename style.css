@@ -1,0 +1,338 @@
+/* ESTILO GERAL */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Epilogue", sans-serif;
+
+}
+
+body{
+    background-color: #0f0d0d;
+    height: 100vh;
+}
+
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex{
+    display: flex;
+}
+
+.btn-contato button{
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #B0346A;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+button:hover{
+    box-shadow: 0px 0px 8px #C93F68;
+    transform: scale(1.05);
+}
+
+h2.titulo{
+    color: #fff;
+    font-size: 38px;
+    text-align: center;
+}
+
+h2.titulo span{
+    color: #B0346A;
+}
+
+/* ESTILO CABEÇALHO */
+header{
+    padding: 40px 4%;
+}
+
+header > .interface{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a{
+    color: rgb(60, 63, 65);
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+}
+
+header a:hover{
+    color: #fff;
+    transform: scale(1.05);
+}
+
+header nav ul{
+    list-style-type: none;
+}
+
+header nav ul li{
+    display: inline-block;
+    padding: 0 40px;
+}
+
+.logo img{
+    width: 100px;
+}
+
+/* ESTILO TOPO DO SITE */
+section.topo-do-site{
+    padding: 40px 4%;
+}
+
+section.topo-do-site .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+.topo-do-site h1{
+    color: #fff;
+    font-size: 40px;
+    line-height: 40px;
+}
+
+.topo-do-site h1 span{
+    color: #B0346A;
+}
+
+.topo-do-site p{
+    color: #fff;
+    margin: 40px 0;
+    text-align: justify;
+}
+
+.topo-do-site .img-topo-site img {
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+@keyframes flutuar {
+    0% {
+        top: 0;
+    }
+    100% {
+        top: 30px;
+    }
+}
+
+/*ESTILO ESPECIALIDADES*/
+section.especialidades{
+    padding: 40px 4%;
+    display: flex; /* ADICIONADO: ativa flexbox */
+    justify-content: center; /* ADICIONADO: centraliza horizontalmente */
+    gap: 60px; /* MOVIDO: agora funciona com flex */
+    flex-wrap: wrap; /* ADICIONADO: quebra linha se necessário */
+}
+
+.especialidades .especialidades-box{
+    color: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    margin-top: 45px;
+    transition: .2s;
+}
+
+.especialidades .especialidades-box:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #ffffff80;
+}
+
+.especialidades .especialidades-box i{
+    font-size: 70px;
+    color: #B0346A;
+}
+
+.especialidades .especialidades-box h3{
+    font-size: 28px;
+    margin: 15px 0;
+}
+
+/* ESTILO DO SOBRE */
+section.sobre{
+    padding: 80px 4%;
+}
+
+section.sobre.flex{
+    align-items: center;
+    gap: 60px;
+}
+
+.sobre .txt-sobre{
+    color: #fff;
+}
+
+.sobre .txt-sobre h2{
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 30px;
+}
+
+.sobre .txt-sobre h2 span{
+    color: #B0346A;
+    display: block;
+}
+
+.sobre .txt-sobre p{
+    margin: 20px 0;
+    text-align: justify;
+}
+
+.btn-social button{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background-color: #B0346A;
+    font-size: 22px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: .2s;
+}
+
+/* AJUSTE DA IMAGEM NO SOBRE */
+.sobre .img-sobre{
+    flex: 0 0 300px;
+    margin-right: 20px; /* espaço extra opcional */
+}
+
+.sobre .img-sobre img{
+    width: 100%;
+    height: 260px; /* menor altura = formato mais horizontal */
+    object-fit: cover;
+    border-radius: 20px;
+    display: block;
+}
+
+/* ESTILO DO PORTFOLIO */
+section.portfolio{
+    padding: 80px 4%;
+    box-shadow: 0 0 40px 10px #ffffff38;
+}
+
+section.portfolio .flex{
+    gap: 80px;
+    margin-top: 60px;
+}
+
+.img-port{
+    width: 360px;
+    height: 460px;
+    background-color: #B0346A;
+    background-size: cover;
+    background-position: 10% 0%;
+    transition: 5s;
+    cursor: pointer;
+    border-radius: 40px;
+    position: relative;
+}
+
+.img-port:hover{
+    background-position: 100% 100%;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #b0346a63;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 600px;
+    color: #fff;
+    opacity: 0;
+    transition: .5s;
+}
+
+.overlay:hover{
+    opacity: 1;
+}
+
+/*ESTILO DO RODAPÉ*/
+
+footer{
+    padding: 60px 4%;
+    background-color: #0a0a0a;
+    color: #fff;
+    box-shadow: 0 0 40px 10px #ffffff1a;
+}
+
+/* TOPO DO FOOTER */
+.footer-top{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.logo-footer img{
+    width: 180px;
+    margin-bottom: 10px;
+}
+
+.logo-footer p{
+    max-width: 300px;
+    color: #ccc;
+    font-size: 14px;
+}
+
+footer h4{
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #B0346A;
+}
+
+.btn-social button{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: none;
+    background-color: #B0346A;
+    color: #fff;
+    font-size: 18px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn-social button:hover{
+    transform: scale(1.1);
+    background-color: #d94b89;
+}
+
+.footer-contato i{
+    color: #B0346A;
+    margin-right: 8px;
+}
+
+.footer-contato a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-contato a:hover{
+    text-decoration: underline;
+}
+
+.footer-bottom{
+    margin-top: 40px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.borda{
+    border-top: 1px solid #B0346A;
+}
